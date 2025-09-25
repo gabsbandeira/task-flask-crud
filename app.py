@@ -49,7 +49,6 @@ def update_task(task_id):
 def delete_task(task_id):
     for task in tasks:
         if task.id == task_id:
-            print(task.to_dict())
             tasks.remove(task)
             return jsonify({"message": "Tarefa deletada com sucesso"})
     return jsonify({"message": "Tarefa não encontrada"}), 404
